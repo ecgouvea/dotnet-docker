@@ -1185,6 +1185,15 @@
                 "$(2.1-RuntimeVersion)-nanoserver-1909": {},
                 "2.1-nanoserver-1909": {}
               }
+            },
+            {
+              "dockerfile": "2.1/aspnet/nanoserver-2004/amd64",
+              "os": "windows",
+              "osVersion": "nanoserver-2004",
+              "tags": {
+                "$(2.1-RuntimeVersion)-nanoserver-2004": {},
+                "2.1-nanoserver-2004": {}
+              }
             }
           ]
         },
