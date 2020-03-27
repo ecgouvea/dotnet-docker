@@ -3,18 +3,10 @@
 # Installer image
 FROM mcr.microsoft.com/windows/servercore:2004 AS installer
 
-RUN ping www.microsoft.com
-
-RUN ping www.microsoft.com
-
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
-
-RUN ping www.microsoft.com
 
 # Retrieve .NET Core Runtime
 ENV DOTNET_VERSION 2.1.16
-
-RUN ping www.microsoft.com
 
 RUN Invoke-WebRequest -OutFile dotnet.zip https://dotnetcli.azureedge.net/dotnet/Runtime/$Env:DOTNET_VERSION/dotnet-runtime-$Env:DOTNET_VERSION-win-x64.zip; `
     $dotnet_sha512 = '76e1a3948c7a2662e59bffa4f8d819dd36142948d78a4f5c2acd1a6bea8658fddd4f17c1096469b0e42c9e9fb145cd31fb28c05228d0711e076411f12bb8d144'; `
